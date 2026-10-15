@@ -166,9 +166,9 @@ strong{color:var(--text);}
 .dropdown a{display:block;padding:7px 4px;color:#e4dbd2;font-size:.95rem;font-weight:500;transition:color .15s,padding .15s;}
 .dropdown a:hover{color:var(--white);padding-left:10px;}
 .header-cta{display:flex;align-items:center;gap:10px;flex:none;}
-.header-phone{display:flex;align-items:center;gap:9px;padding:9px 16px;border:2px solid var(--gold);border-radius:3px;color:var(--gold);font-family:var(--fh);font-weight:600;font-size:1.15rem;letter-spacing:.04em;white-space:nowrap;transition:background .2s,color .2s;}
-.header-phone svg{width:18px;height:18px;}
-.header-phone:hover{background:var(--gold);color:var(--ink);}
+.header-phone{display:flex;align-items:center;gap:10px;padding:11px 22px;border:2px solid var(--gold);border-radius:3px;background:var(--gold);color:var(--ink);font-family:var(--fh);font-weight:700;font-size:1.3rem;letter-spacing:.04em;white-space:nowrap;transition:background .2s,color .2s;}
+.header-phone svg{width:20px;height:20px;}
+.header-phone:hover{background:var(--gold-soft);border-color:var(--gold-soft);}
 .header-cta .btn{padding:12px 20px;font-size:.88rem;}
 .menu-toggle{display:none;background:none;border:0;color:var(--white);padding:6px;cursor:pointer;}
 .menu-toggle svg{width:28px;height:28px;}
@@ -576,8 +576,7 @@ strong{color:var(--text);}
 /* ---------- Responsive ---------- */
 @media (max-width:1180px){
   .main-nav a.nav-link{padding:12px 9px;font-size:.86rem;}
-  .header-phone{font-size:1rem;padding:8px 12px;}
-  .header-cta .btn{padding:11px 14px;font-size:.82rem;}
+  .header-phone{font-size:1.1rem;padding:10px 16px;}
   .brand-logo{height:60px;}
 }
 @media (max-width:1080px){
@@ -604,7 +603,7 @@ strong{color:var(--text);}
   .main-nav{display:none;}
   .menu-toggle{display:block;}
   .header-cta .btn{display:none;}
-  .header-phone{padding:8px 12px;font-size:1rem;}
+  .header-phone{padding:8px 12px;font-size:1rem;font-weight:700;}
   .header-inner{padding:8px 16px;}
   .brand-logo{height:56px;}
   .split,.split.rev{grid-template-columns:1fr;gap:56px;}
