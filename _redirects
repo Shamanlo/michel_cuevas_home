@@ -1,0 +1,10 @@
+# Cloudflare Pages redirects (replaces the .htaccess rules on Cloudflare)
+/industrial-roofing /commercial-roofing 301
+/drywall-repair /drywall-installation 301
+/mud-tape-texture /drywall-installation 301
+/emergency-services /storm-damage-restoration 301
+/full-service-home-improvement /services 301
+/exterior-property-management /services 301
+/demolition-services /interior-remodeling-renovations 301
+/marion /cedar-rapids 301
+/burlington /service-areas 301
