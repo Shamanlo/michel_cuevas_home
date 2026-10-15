@@ -166,7 +166,9 @@ strong{color:var(--text);}
 .dropdown a{display:block;padding:7px 4px;color:#e4dbd2;font-size:.95rem;font-weight:500;transition:color .15s,padding .15s;}
 .dropdown a:hover{color:var(--white);padding-left:10px;}
 .header-cta{display:flex;align-items:center;gap:10px;flex:none;}
-.header-phone{display:none;}
+.header-phone{display:flex;align-items:center;gap:9px;padding:9px 16px;border:2px solid var(--gold);border-radius:3px;color:var(--gold);font-family:var(--fh);font-weight:600;font-size:1.15rem;letter-spacing:.04em;white-space:nowrap;transition:background .2s,color .2s;}
+.header-phone svg{width:18px;height:18px;}
+.header-phone:hover{background:var(--gold);color:var(--ink);}
 .header-cta .btn{padding:12px 20px;font-size:.88rem;}
 .menu-toggle{display:none;background:none;border:0;color:var(--white);padding:6px;cursor:pointer;}
 .menu-toggle svg{width:28px;height:28px;}
@@ -573,7 +575,10 @@ strong{color:var(--text);}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1180px){
-  .main-nav a.nav-link{padding:12px 10px;font-size:.9rem;}
+  .main-nav a.nav-link{padding:12px 9px;font-size:.86rem;}
+  .header-phone{font-size:1rem;padding:8px 12px;}
+  .header-cta .btn{padding:11px 14px;font-size:.82rem;}
+  .brand-logo{height:60px;}
 }
 @media (max-width:1080px){
   .form-grid{grid-template-columns:1fr 1fr 1fr;}
@@ -595,9 +600,11 @@ strong{color:var(--text);}
 }
 @media (max-width:960px){
   .topbar-info .tb-hide{display:none;}
+  .topbar-info a:first-child{display:none;}
   .main-nav{display:none;}
   .menu-toggle{display:block;}
   .header-cta .btn{display:none;}
+  .header-phone{padding:8px 12px;font-size:1rem;}
   .header-inner{padding:8px 16px;}
   .brand-logo{height:56px;}
   .split,.split.rev{grid-template-columns:1fr;gap:56px;}
@@ -612,7 +619,10 @@ strong{color:var(--text);}
   .clean-grid{grid-template-columns:repeat(3,1fr);}
   .mobile-callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--accent-2);}
   .mobile-callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;color:#fff;font-family:var(--fh);font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
-  .mobile-callbar a:first-child{background:var(--ink);color:var(--gold);}
+  .mobile-callbar a:first-child{background:var(--ink);color:var(--gold);flex:1.4;}
+  .mobile-callbar a{white-space:nowrap;padding:16px 10px;font-size:.95rem;}
+  .mobile-callbar a:last-child{flex:1;}
+  .mobile-callbar a svg{width:17px;height:17px;flex:none;}
   body{padding-bottom:58px;}
 }
 @media (max-width:680px){
