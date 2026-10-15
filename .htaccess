@@ -1,0 +1,44 @@
+# Michel Cuevas Home Improvement
+Options -Indexes +FollowSymLinks
+
+# Force HTTPS (uncomment after your SSL certificate is active)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+
+# Removed pages (v8) -> closest live page
+RewriteRule ^industrial-roofing(\.html)?/?$ /commercial-roofing [R=301,L]
+RewriteRule ^drywall-repair(\.html)?/?$ /drywall-installation [R=301,L]
+RewriteRule ^mud-tape-texture(\.html)?/?$ /drywall-installation [R=301,L]
+RewriteRule ^emergency-services(\.html)?/?$ /storm-damage-restoration [R=301,L]
+RewriteRule ^full-service-home-improvement(\.html)?/?$ /services [R=301,L]
+RewriteRule ^exterior-property-management(\.html)?/?$ /services [R=301,L]
+RewriteRule ^demolition-services(\.html)?/?$ /interior-remodeling-renovations [R=301,L]
+RewriteRule ^marion(\.html)?/?$ /cedar-rapids [R=301,L]
+RewriteRule ^burlington(\.html)?/?$ /service-areas [R=301,L]
+
+# If a request maps to an existing .html file, serve it without the extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Redirect any direct .html request to the clean URL (301)
+RewriteCond %{THE_REQUEST} \s/+([^.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Redirect /index to the site root
+RewriteRule ^index$ / [R=301,L]
+
+ErrorDocument 404 /index.html
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
