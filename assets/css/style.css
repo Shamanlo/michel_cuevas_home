@@ -369,6 +369,8 @@ strong{color:var(--text);}
 .short-cap svg{width:16px;height:16px;color:var(--accent-2);}
 .dark .short-cap svg{color:var(--gold);}
 .shorts-pair{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:820px;margin:0 auto;}
+.shorts-pair.shorts-trio{grid-template-columns:repeat(3,1fr);gap:40px;max-width:1120px;}
+@media (max-width:900px){.shorts-pair.shorts-trio{grid-template-columns:1fr;gap:56px;max-width:820px;}}
 .video-section .split{grid-template-columns:1.1fr .9fr;}
 
 /* ---------- Gallery ---------- */
