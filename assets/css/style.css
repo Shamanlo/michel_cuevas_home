@@ -664,3 +664,23 @@ strong{color:var(--text);}
   .btn{padding:14px 22px;}
   .hero .btn-row .btn{flex:1 1 100%;}
 }
+
+/* Award badge card (Local Vibe Check 2026) */
+.award-card{display:flex;align-items:center;gap:26px;max-width:640px;margin:44px auto 0;padding:22px 28px;background:var(--white);border:1px solid rgba(28,23,20,.1);border-left:4px solid var(--gold);border-radius:var(--radius);box-shadow:0 10px 28px rgba(10,9,8,.07);text-align:left;}
+.award-card .award-badge{flex:0 0 auto;display:block;line-height:0;border-radius:50%;transition:transform .25s ease;}
+.award-card .award-badge:hover{transform:rotate(-4deg) scale(1.04);}
+.award-card .award-badge img{width:132px;height:132px;display:block;}
+.award-card .eyebrow{margin-bottom:6px;}
+.award-card h3{font-size:1.45rem;margin:0 0 8px;}
+.award-card p{margin:0 0 10px;font-size:.98rem;}
+.award-card .award-link{font-family:var(--fh);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.86rem;color:var(--text);text-decoration:none;border-bottom:2px solid var(--gold);}
+.award-card .award-link:hover{color:var(--ink);border-color:var(--ink);}
+.sidebar-award{text-align:center;margin-bottom:24px;}
+.sidebar-award a{display:inline-block;line-height:0;}
+.sidebar-award img{width:150px;height:150px;margin:4px auto 10px;}
+.sidebar-award p{font-size:.88rem;margin:0;}
+@media (max-width:640px){
+  .award-card{flex-direction:column;text-align:center;gap:14px;padding:22px 20px;}
+  .award-card .eyebrow{justify-content:center;}
+  .award-card .award-badge img{width:120px;height:120px;}
+}
